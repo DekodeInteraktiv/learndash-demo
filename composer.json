@@ -1,0 +1,84 @@
+{
+  "name": "dekodeinteraktiv/teft-base",
+  "type": "project",
+  "license": "MIT",
+  "description": "Dekode WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://packages.dekodes.no/"
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "^1.4",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "*",
+    "koodimonni-language/core-nb_no": "*",
+    "oscarotero/env": "^1.1.0",
+    "dekode/teft-theme": "*",
+    "wpackagist-plugin/gutenberg": "^3.0.1"
+  },
+  "require-dev": {
+    "dekodeinteraktiv/coding-standards": "*"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    },
+    "dropin-paths": {
+      "web/app/languages/": [
+        "vendor:koodimonni-language"
+      ],
+      "web/app/languages/plugins/": [
+        "vendor:koodimonni-plugin-language"
+      ]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\"",
+      "composer local-fix-no-folder-check"
+    ],
+    "local-fix-no-folder-check": [
+      "bash post-install-scripts/local-webroot-fix.sh;"
+    ],
+    "local-fix": [
+      "bash post-install-scripts/local-webroot-fix.sh --check-folder;"
+    ],
+    "test": [
+      "phpcs"
+    ]
+  },
+  "archive": {
+    "exclude": [
+      ".editorconfig",
+      ".gitignore",
+      "composer.json",
+      "composer.lock",
+      "LICENSE",
+      "phpcs.xml"
+    ]
+  }
+}
