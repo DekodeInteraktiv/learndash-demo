@@ -9,6 +9,7 @@ web/app/languages/plugins/*
 !web/app/languages/plugins/.gitkeep
 web/app/mu-plugins/*/
 web/app/plugins/*
+!web/app/plugins/sfwd-lms
 !web/app/plugins/.gitkeep
 web/app/themes/teft-theme
 web/app/uploads/*

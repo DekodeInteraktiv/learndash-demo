@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14ff59cc54f41ed242e715764d5271b7",
+    "content-hash": "86755baa6fa3162cefe9daa0a74ab4f1",
     "packages": [
         {
             "name": "composer/installers",
@@ -153,18 +153,6 @@
                 }
             ],
             "time": "2021-01-14T11:07:16+00:00"
-        },
-        {
-            "name": "dekode/sfwd-lms",
-            "version": "3.1.7",
-            "dist": {
-                "type": "zip",
-                "url": "https://packages.dekodes.no/packages/z2qj59ybg1wecusn348mdafrlt7xph0i.zip",
-                "reference": "z2qj59ybg1wecusn348mdafrlt7xph0i",
-                "shasum": ""
-            },
-            "type": "wordpress-plugin",
-            "time": "2020-06-03T13:02:37+00:00"
         },
         {
             "name": "dekode/teft-theme",
